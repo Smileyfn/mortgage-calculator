@@ -183,13 +183,6 @@ a {
 .input-group-text {
     background-color: var(--Slate-100);
 }
-.form {
-    color: var(--Slate-300);
-    max-width: 400px;
-    padding: 0.6rem;
-    border-radius: 5px;
-    outline: none;
-}
 
 label {
     color: var(--Slate-900);
@@ -211,9 +204,10 @@ label {
     accent-color: var(--Lime);
 }
 /**/
-.campoModificado{
-    margin-right: 1rem;
+input[type="number"] {
+    margin-left: 20px; /* Ajusta según lo necesario */
 }
+
 .campoModificado {
     display: flex;
     align-items: center;
@@ -224,7 +218,6 @@ label {
   }
   
   .campoModificado .simbolo {
-    margin-right: 0px; /* Espacio entre el símbolo y el campo de texto */
     font-size: 16px;
     color: var(--Slate-700); /* Personaliza el color del símbolo */
     font-weight: bold;
@@ -238,13 +231,10 @@ label {
     width: 100%; /* Ocupa el resto del espacio */
   }
   
-
 .campoModificado:hover + .simbolo {
     cursor: pointer;
     background-color:hsla(61, 70%, 52%, 0.26);
 }
-
-
 
 .campoModificado:focus-within  {
     color:hsl(61, 70%, 52%);
@@ -258,26 +248,6 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 
-/*Cursor y colores */
-/* .form-control {
-    cursor: pointer;
-}
-.colorInput:focus-within + .input-group-text {
-    background-color: hsl(61, 70%, 52%);
-    border-color:  hsl(61, 70%, 52%);
-    outline: none !important;
-    border: 1px solid transparent;
-}
-.colorInput:focus-within {
-    background-color: hsla(61, 70%, 52%, 0.219);
-    border-color:  hsl(61, 70%, 52%);
-    outline: none;
-}
-.input-group-text:focus-within {
-    background-color: hsl(61, 70%, 52%);
-    border-color:  hsl(61, 70%, 52%);
-    outline: none;
-} */
 .form-control:hover {
     cursor: pointer;
 }
