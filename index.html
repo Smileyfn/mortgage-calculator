@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="resets.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="calculator.js"></script>
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+  
+</head>
+<body>
+  <main class="SelectorP">
+    <section class="selector">
+      <div class="container">
+        <div>
+          <div class="section1">  <!--bloques por secciones -->
+          <h3 class="h2Pc" id="h2P">Mortgage Calculator</h3>
+          <a id="clean" href="">Clear All</a>  
+        </div>
+        
+        <div class="section2">
+          <label for="">Mortgage Amount</label>
+          <div class="campoModificado colorInput" id="inputStyleJs0">
+            <span class="simbolo" id="">$</span>
+            <input type="number" id="amount" class="campoModificado form colorInput" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="partDeskot">
+          <div class="section3 ">
+            <label for="">Mortgage Term</label>
+            <div class="campoModificado colorInput" id="inputStyleJs1">
+              <input type="number" id="term" class="campoModificado " placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <span class="simbolo simboloEspecifico" id="">years</span>
+            </div>
+          </div>
+    
+          <div class="section4">
+            <label for="">Interest Rate</label>
+            <div class="campoModificado colorInput" id="inputStyleJs2">
+              <input type="number" id="cup" class="campoModificado" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <span class="simbolo simboloEspecifico" id="basic-addon2">%</span>
+            </div>
+          </div>
+        </div>
+        
+           <!--botones radios -->
+        <div class="section5">
+          <label for=""> Mortgage Type</label>
+          <div class=" bordeRadio">
+            <input class="inputR" name="opcion" type="radio" name="exampleRadios" id="exampleRadios1" value="mensaje1" checked>
+            <label class="form-check-label" for="exampleRadios1">Repayment</label>
+          </div>
+          <div class=" bordeRadio">
+            <input class="inputR" name="opcion" type="radio" name="exampleRadios" id="exampleRadios2" value="mensaje2">
+            <label class="form-check-label" for="exampleRadios2">Interest Only</label>
+          </div>
+          
+          <!--interes y taza  -->
+          <div id="plzcM"> </div>
+          <div id="intcM"></div>
+        </div>
+        
+        <button class="btnPrincipal" onclick="BtnC()"><h3 class="btnP">Calculate Repayments</h3>
+          <img id="btnImg" src="assets/images/icon-calculator.svg" alt="">
+        </button>
+        </div>
+      </div>
+      <!--Resultados  -->
+      
+        <div id="resultadoFinal">
+          <h3 class="h3R">Your results</h3>
+          <p class="parrafoP">Your results are shown below based on the information you provided. 
+          To adjust the results, edit the form and click “calculate repayments” again.</p>
+          
+          <div class="tarjeta">
+            <hr class="hrPrincipal">
+            <p class="PEspacio">Your monthly repayments</p>
+            <div id="resultado"></div>
+            <hr class="hr2">
+            <p class="ParrafoTotal"> Total you'll repay over the term</p>
+            <div id="mensaje"></div>
+          </div>
+        </div>
+
+      <div class="shown">
+        <img class="logo" src="assets/images/illustration-empty.svg" alt="">
+        <h2 class="h2Unico">Results shown here</h2>
+        <p id="parrafoBlock" > Complete the form and click “calculate repayments” to see what 
+          your monthly repayments would be.</p>
+      </div>
+    </section>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Smailyn Fernandez</a>.
+  </div>
+</body>
+</html>
