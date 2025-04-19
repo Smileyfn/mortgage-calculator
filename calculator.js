@@ -4,6 +4,32 @@ let amount;
 let term;
 
 function BtnC(){
+
+    const amountInput = document.getElementById("amount");
+    const cupInput = document.getElementById("cup");
+    const termInput = document.getElementById("term");
+
+    const inputAmount = document.getElementById("inputStyleJs0");
+    const inputCut = document.getElementById("inputStyleJs1");
+    const inputTerm = document.getElementById("inputStyleJs2");
+    
+
+    if (amountInput.value.trim() === "") {
+        inputAmount.style.border = "2px solid red"
+        hasError = true;
+    }
+
+    if (cupInput.value.trim() === "") {
+        inputCut.style.border = "2px solid red"
+        hasError = true;
+    }
+
+    if (termInput.value.trim() === "") {
+        inputTerm.style.border = "2px solid red"
+        hasError = true;
+    }
+
+
     // Obtenemos los valores de los inputs
     amount = parseFloat(document.getElementById('amount').value);
     cup = parseFloat(document.getElementById('cup').value);
@@ -82,7 +108,6 @@ function BtnC(){
     const mensajeDiv = document.getElementById('mensaje');
     const radios = document.querySelectorAll('input[type="radio"]');
 
-
     // Recorremos los radio buttons para encontrar cuál está seleccionado
     radios.forEach(radio => {
         if (radio.checked) { // Si está seleccionado
@@ -98,9 +123,26 @@ function BtnC(){
     } else {
         mensajeDiv.style.color = "red";
         mensajeDiv.style.fontSize = "40px";
-    }      
+    } 
+
     //Cambia el color del texto para ocultarlo 
     parrafoBlock.style.color = "#122f3f"
+
+    let montoI = document.getElementById("amount");
+    let plazoI = document.getElementById("term");
+    let tasaI = document.getElementById("cup");
+    
+    let resultwww = document.getElementById("mensajewww");
+    evento.preventDefault();
+
+    if (montoI.value.trim() && plazoI.value.trim() && tasaI.value.trim() === ""){
+        montoI.style.color = "red";
+        plazoI.style.color = "red";
+        tasaI.style.color = "red";
+        resultwww.textContent = "este campo es obligatorio";
+       
+        return false;
+    } return true;
 
 }
 onclick();
